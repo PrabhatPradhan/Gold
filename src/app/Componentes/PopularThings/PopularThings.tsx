@@ -21,13 +21,15 @@ const activities = [
 ];
 
 export default function PopularThingsToDo() {
-  const [activeIndex, setActiveIndex] = useState(null); // Default: none selected
+  const [activeIndex, setActiveIndex] = useState<number | null>(null); // ✅ fixed type
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
       {/* Heading */}
       <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
-        <h2 className="text-3xl font-extrabold text-slate-900">Popular things to do</h2>
+        <h2 className="text-3xl font-extrabold text-slate-900">
+          Popular things to do
+        </h2>
         <a
           href="#"
           className="text-slate-700 font-medium flex items-center gap-1 hover:underline text-sm"
@@ -53,13 +55,19 @@ export default function PopularThingsToDo() {
             >
               <div
                 className={`w-14 h-14 flex items-center justify-center rounded-full mb-5 ${
-                  isActive ? 'bg-white text-indigo-600' : 'bg-indigo-100 text-indigo-600'
+                  isActive
+                    ? 'bg-white text-indigo-600'
+                    : 'bg-indigo-100 text-indigo-600'
                 }`}
               >
                 <span className="text-xl">{icon}</span>
               </div>
               <h3 className="text-base font-semibold">{title}</h3>
-              <p className={`text-sm mt-1 ${isActive ? 'text-indigo-100' : 'text-slate-500'}`}>
+              <p
+                className={`text-sm mt-1 ${
+                  isActive ? 'text-indigo-100' : 'text-slate-500'
+                }`}
+              >
                 {tours}
               </p>
             </div>

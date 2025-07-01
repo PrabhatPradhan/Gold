@@ -1,4 +1,4 @@
-import Image from "next/image";
+ 
 import Navbar from "./Componentes/Navbar/Navbar";
 import Top from "./Componentes/Top/Top";
 import Carousel from "./Componentes/Carousel/Carousel"

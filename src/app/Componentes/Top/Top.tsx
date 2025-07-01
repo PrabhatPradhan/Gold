@@ -46,10 +46,10 @@ export default function Top() {
       <div className="absolute bottom-30 left-6  md:left-10 text-white z-10 max-w-[90%] md:max-w-[600px]">
         <h3 className="text-xl">Starting at $978</h3>
         <h1 className="text-3xl md:text-5xl font-bold mt-2">
-          Iceland's legendary Golden Circle
+          Iceland s legendary Golden Circle
         </h1>
         <p className="mt-4  ">
-          Enjoy a full-day bus tour of Iceland's legendary Golden Circle. Soak
+          Enjoy a full-day bus tour of Iceland s legendary Golden Circle. Soak
           in the warm thermal waters of the Secret Lagoon.
         </p>
         <button className="mt-6 py-2 px-6 bg-white text-black rounded">

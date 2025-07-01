@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { FaShieldAlt, FaUserTie, FaClock } from "react-icons/fa";
 
 export default function WhoWeAre() {
@@ -82,33 +83,36 @@ export default function WhoWeAre() {
                 Experience
               </div>
             </div>
-
             <div className="grid grid-cols-2 gap-4 relative">
-  {/* Main Large Image on Top Right */}
-  <div className="col-span-2">
-    <img
-      src="https://plus.unsplash.com/premium_photo-1730045161796-212340c2ecb4?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt=""
-      className="w-10/12 h-[18rem] ml-auto rounded-lg"
-    />
-  </div>
+      {/* Main Large Image on Top Right */}
+      <div className="col-span-2 relative h-[18rem] w-10/12 ml-auto">
+        <Image
+          src="/Images/who-1.jpeg"
+          alt="Main Image"
+          fill
+          className="rounded-lg object-cover"
+        />
+      </div>
 
-  {/* Two Smaller Images in Bottom Row */}
-  <div className="w-full">
-    <img
-      src="https://images.unsplash.com/photo-1570472459481-fc2142c1d6ba?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt=""
-      className="w-full h-[15rem] border-4 border-white rounded-lg object-cover"
-    />
-  </div>
-  <div className="w-full">
-    <img
-      src="https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt=""
-      className="w-full h-[10rem] rounded-lg object-cover"
-    />
-  </div>
-</div>
+      {/* Two Smaller Images in Bottom Row */}
+      <div className="relative w-full h-[15rem]">
+        <Image
+          src="/Images/wh0-2.jpeg"
+          alt="Image 2"
+          fill
+          className="border-4 border-white rounded-lg object-cover"
+        />
+      </div>
+
+      <div className="relative w-full h-[10rem]">
+        <Image
+          src="/Images/who-3.jpeg"
+          alt="Image 3"
+          fill
+          className="rounded-lg object-cover"
+        />
+      </div>
+    </div>
 
           </div>
         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { FaArrowLeft, FaArrowRight, FaHeart } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
@@ -8,7 +9,7 @@ import { PiClockLight } from "react-icons/pi";
 const data = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1603378995290-8d4ce0495ddd?q=80",
+    image: "/Images/slider-card.jpeg",
     location: "Paris, France",
     title: "Centipede Tour – Guided Arizona Desert Tour by ATV",
     rating: "4.8 (243)",
@@ -16,7 +17,7 @@ const data = [
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1603378995290-8d4ce0495ddd?q=80",
+    image: "/Images/slider-card.jpeg",
     location: "New York, USA",
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     rating: "4.8 (243)",
@@ -24,7 +25,7 @@ const data = [
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1603378995290-8d4ce0495ddd?q=80",
+    image: "/Images/slider-card.jpeg",
     location: "London, UK",
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     rating: "4.8 (243)",
@@ -32,7 +33,7 @@ const data = [
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1603378995290-8d4ce0495ddd?q=80",
+    image: "/Images/slider-card.jpeg",
     location: "New York, USA",
     title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
     rating: "4.8 (243)",
@@ -40,7 +41,7 @@ const data = [
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1603378995290-8d4ce0495ddd?q=80",
+    image: "/Images/slider-card.jpeg",
     location: "Paris, France",
     title: "Centipede Tour – Guided Arizona Desert Tour by ATV",
     rating: "4.8 (243)",
@@ -48,7 +49,7 @@ const data = [
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1603378995290-8d4ce0495ddd?q=80",
+    image: "/Images/slider-card.jpeg",
     location: "New York, USA",
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     rating: "4.8 (243)",
@@ -56,7 +57,7 @@ const data = [
   },
   {
     id: 7,
-    image: "https://images.unsplash.com/photo-1603378995290-8d4ce0495ddd?q=80",
+    image: "/Images/slider-card.jpeg",
     location: "London, UK",
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     rating: "4.8 (243)",
@@ -64,7 +65,7 @@ const data = [
   },
   {
     id: 8,
-    image: "https://images.unsplash.com/photo-1581262177533-1b1760b87952?q=80",
+    image: "/Images/slider-card.jpeg",
     location: "New York, USA",
     title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
     rating: "4.8 (243)",
@@ -73,21 +74,22 @@ const data = [
 ];
 
 export default function TopTrending() {
-  const scrollRef = useRef("");
+  const scrollRef = useRef<HTMLDivElement>(null); // ✅ Typed ref for TypeScript
 
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -320 : 320,
-        behavior: "smooth",
-      });
+  const scroll = (direction: "left" | "right") => {
+    const container = scrollRef.current;
+    if (container) {
+      const scrollAmount = direction === "left" ? -320 : 320;
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
   return (
     <div className="bg-[#f5f5f5] p-4 md:p-8 overflow-hidden relative">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl md:text-2xl font-bold text-[#131313]">Top Trending</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-[#131313]">
+          Top Trending
+        </h2>
         <a href="#" className="text-sm text-blue-600">
           See all
         </a>
@@ -96,23 +98,28 @@ export default function TopTrending() {
       <div className="relative">
         <div
           ref={scrollRef}
-          className="flex gap-9 overflow-x-auto   scroll-smooth   pb-2"  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="flex gap-9 overflow-x-auto scroll-smooth pb-2"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {data.map((item) => (
             <div
               key={item.id}
               className="bg-white rounded-lg shadow-md p-4 min-w-[260px] max-w-[270px] flex-shrink-0"
             >
-              <div className="relative">
-                <img
+              {/* ✅ Image with fixed height using fill */}
+              <div className="relative w-full h-[200px] rounded-md overflow-hidden">
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="rounded-md w-full h-[180px] object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <button className="absolute bottom-2 right-2 bg-white p-1 rounded-full shadow">
                   <FaHeart className="text-gray-500 text-sm" />
                 </button>
               </div>
+
+              {/* Details */}
               <div className="mt-3 text-sm text-gray-600 flex items-center gap-1">
                 <MdLocationOn className="text-lg" /> {item.location}
               </div>

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import "./Footer.css"
 import React from "react";
 import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaPinterestP } from "react-icons/fa6";
@@ -11,7 +12,7 @@ export default function Footer() {
         {/* Subscribe Card */}
         <div className="bg-green-100 rounded-b-2xl  w-[23rem]  p-12 lg:col-span-1 ">
           <div className="flex justify-center mb-4">
-            <img src="https://goldtravels.net/public/front/assets/images/logo.png" alt="Logo" width={150} height={60} className="object-contain" />
+            <Image src="/Images/nav-logo.png" alt="Logo" width={150} height={60} className="object-contain" />
           </div>
           <h2 className="text-center text-lg md:text-xl lg:text-2xl font-bold text-black mb-2">
             Sign up for exclusive deals and see price drops!

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 
 const destinations = [
@@ -7,31 +8,36 @@ const destinations = [
     id: 1,
     name: "Bali",
     tours: "100+ Tours",
-    image: "https://plus.unsplash.com/premium_photo-1719581957038-0121108b9455?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "/Images/card-1.jpeg",
   },
   {
     id: 2,
     name: "Roma",
     tours: "100+ Tours",
-    image: "https://plus.unsplash.com/premium_photo-1664361480872-6416aab14696?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "/Images/card-2.jpeg",
   },
   {
     id: 3,
     name: "Phuket",
     tours: "100+ Tours",
-    image: "https://images.unsplash.com/photo-1504598318550-17eba1008a68?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "/Images/card-3.jpeg",
   },
   {
     id: 4,
     name: "Paris",
     tours: "100+ Tours",
-    image: "https://plus.unsplash.com/premium_photo-1664361480872-6416aab14696?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "/Images/card-2.jpeg",
   },
   {
     id: 5,
     name: "Bangkok",
     tours: "100+ Tours",
-    image: "https://plus.unsplash.com/premium_photo-1719581957038-0121108b9455?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "/Images/card-1.jpeg",
   },
 ];
 
@@ -56,11 +62,14 @@ export default function TrendingDestinations() {
             key={item.id}
             className="relative rounded-xl overflow-hidden shadow-md group cursor-pointer"
           >
-            <img
+            <Image
               src={item.image}
               alt={item.name}
+              width={400} // adjust to your design
+              height={304} // adjust to your design
               className="w-full h-[19rem] object-cover transform group-hover:scale-105 transition"
             />
+
             <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent px-4 py-3 text-white">
               <h3 className="text-lg font-semibold">{item.name}</h3>
               <p className="text-sm">{item.tours}</p>

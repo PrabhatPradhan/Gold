@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useRef } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
@@ -7,108 +8,108 @@ export default function TrendingDestinations() {
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-1.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
 
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
 
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
 
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
 
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
 
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
 
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
     {
       city: "Paris",
       tours: "100+ Tours",
-      img: "https://images.unsplash.com/photo-1549144511-f099e773c147?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "/Images/crausal-2.jpeg",
     },
     {
       city: "Singapore",
       tours: "300+ Tours",
-      img: "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=687",
+      img: "/Images/crausal-1.jpeg",
     },
   ];
 
@@ -136,7 +137,6 @@ export default function TrendingDestinations() {
           marginBottom: "40px",
           maxWidth: "1200px",
           marginInline: "auto",
-           
         }}
       >
         <h2
@@ -180,7 +180,7 @@ export default function TrendingDestinations() {
             cursor: "pointer",
             fontSize: "24px",
             padding: "8px",
-            
+
             borderRadius: "50%",
             boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
             marginLeft: "3px",
@@ -201,7 +201,6 @@ export default function TrendingDestinations() {
             scrollSnapType: "x mandatory",
             scrollbarWidth: "none",
             msOverflowStyle: "none",
-            
           }}
         >
           {destinations.map((d, i) => (
@@ -214,9 +213,11 @@ export default function TrendingDestinations() {
                 textAlign: "center",
               }}
             >
-              <img
+              <Image
                 src={d.img}
                 alt={d.city}
+                width={0}
+                height={0}
                 style={{
                   width: "120px",
                   height: "120px",
@@ -225,6 +226,7 @@ export default function TrendingDestinations() {
                   marginBottom: "12px",
                 }}
               />
+
               <p
                 style={{ fontWeight: 600, fontSize: "18px", color: "#0f172a" }}
               >

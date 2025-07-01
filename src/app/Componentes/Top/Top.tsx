@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const images = [
@@ -29,13 +30,14 @@ export default function Top() {
     <div className="relative w-full h-[35rem] overflow-hidden">
       {/* Images with fade/slide animation */}
       {images.map((src, idx) => (
-        <img
-          key={idx}
-          src={src}
-          alt={`Slide ${idx + 1}`}
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out
-            ${idx === currentIndex ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"}`}
-        />
+         <Image
+         key={idx}
+         src={src}
+         alt={`Slide ${idx + 1}`}
+         fill
+         className={`absolute top-0 left-0 object-cover transition-all duration-1000 ease-in-out
+           ${idx === currentIndex ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"}`}
+       />
       ))}
  
 

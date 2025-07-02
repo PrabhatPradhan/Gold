@@ -7,82 +7,82 @@ const destinations = [
   {
     name: 'Thailand',
     price: '₹36,500',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-1.jpeg',
   },
   {
     name: 'Maldives',
     price: '₹70,900',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-2.jpeg',
   },
   {
     name: 'Sri Lanka',
     price: '₹48,500',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-3.jpeg',
   },
   {
     name: 'Vietnam',
     price: '₹8,800',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-4.jpeg',
   },
   {
     name: 'Almaty',
     price: '₹20,300',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-5.jpeg',
   },
   {
     name: 'Hong Kong',
     price: '₹--,--',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-6.jpeg',
   },
   {
     name: 'Malaysia',
     price: '₹9,800',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-7.jpeg',
   },
   {
     name: 'Seychelles',
     price: '',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-8.jpeg',
   },
   {
     name: 'Thailand',
     price: '₹36,500',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-1.jpeg',
   },
   {
     name: 'Maldives',
     price: '₹70,900',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-2.jpeg',
   },
   {
     name: 'Sri Lanka',
     price: '₹48,500',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-3.jpeg',
   },
   {
     name: 'Vietnam',
     price: '₹8,800',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-4.jpeg',
   },
   {
     name: 'Almaty',
     price: '₹20,300',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-5.jpeg',
   },
   {
     name: 'Hong Kong',
     price: '₹--,--',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-6.jpeg',
   },
   {
     name: 'Malaysia',
     price: '₹9,800',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-7.jpeg',
   },
   {
     name: 'Seychelles',
     price: '',
-    image: '/Images/visafre.jpeg',
+    image: '/Images/Visa-card-8.jpeg',
   },
 ];
 
@@ -98,7 +98,7 @@ export default function VisaFreeDestinations() {
   };
 
   return (
-    <div className="px-4 md:px-6 py-8 md:py-10 bg-white">
+    <div className="px-4 md:px-6 py-8 md:py-10 bg-white ml-12 mr-12">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-2">
         <div>
@@ -118,16 +118,16 @@ export default function VisaFreeDestinations() {
       {/* Scrollable Destination Cards */}
       <div
         ref={scrollRef}
-        className="flex gap-2 overflow-x-auto no-scrollbar pb-1"
+        className="flex gap-2 overflow-x-auto no-scrollbar mt-8 pb-1"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {destinations.map((dest, idx) => (
           <div
             key={idx}
-            className="min-w-[140px] sm:min-w-[180px] md:min-w-[220px] h-[220px] sm:h-[260px] relative rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform"
+            className="min-w-[120px] sm:min-w-[180px] md:min-w-[140px] h-[170px] sm:h-[210px] relative rounded-xl overflow-hidden shadow-md hover:scale-105 transition-transform"
           >
-            <Image src={dest.image} alt={dest.name} fill className="object-cover" />
-            <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white p-2 sm:p-3 text-xs sm:text-sm">
+            <Image src={dest.image} alt={dest.name} fill className="object-cover " />
+            <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white p-2 sm:p-3 text-xs ">
               <h3 className="font-semibold">{dest.name}</h3>
               {dest.price && (
                 <p>

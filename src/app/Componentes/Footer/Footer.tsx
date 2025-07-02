@@ -10,7 +10,10 @@ export default function Footer() {
      <footer className="bg-[url('/Images/footer-back.png')] text-white   px-6 md:px-10 lg:px-20">
       <div className="grid grid-cols-1 lg:grid-cols-4  pb-10">
         {/* Subscribe Card */}
-        <div className="bg-green-100 rounded-b-2xl  w-[23rem]  p-12 lg:col-span-1 ">
+        <div className="bg-green-100 rounded-b-2xl  w-[23rem]  p-12 lg:col-span-1 " 
+        style={{ backgroundImage: "url('/Images/footer-two-contact-bg.png')" }}
+      
+        >
           <div className="flex justify-center mb-4">
             <Image src="/Images/nav-logo.png" alt="Logo" width={150} height={60} className="object-contain" />
           </div>

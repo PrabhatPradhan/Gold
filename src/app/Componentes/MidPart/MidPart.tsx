@@ -5,11 +5,11 @@ import { FaArrowRight } from "react-icons/fa";
 export default function PromoBanner() {
   return (
     <div className="mid">
-      <div className="  w-full" 
+      <div className="bg-cover bg-center w-full" 
       style={{
-        backgroundImage: "url('/Images/mid-bg.png')",
+        backgroundImage: "url('/Images/mid-bbg.png')",
       }} >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between py-12 px-6 md:px-12">
+      <div className="max-w-7xl ml-8 mx-auto flex flex-col md:flex-row items-center justify-between py-12 px-6 md:px-12">
         {/* Left Section */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <h2 className="text-3xl md:text-4xl font-bold text-[#131313] leading-tight">

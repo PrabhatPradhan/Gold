@@ -24,7 +24,7 @@ export default function PopularThingsToDo() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null); // ✅ fixed type
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <section className="max-w-7xl mx-auto px-4 py-16 ml-12 mr-12">
       {/* Heading */}
       <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
         <h2 className="text-3xl font-extrabold text-slate-900">
@@ -50,11 +50,11 @@ export default function PopularThingsToDo() {
               className={`cursor-pointer rounded-2xl px-6 py-8 flex flex-col items-center text-center transition duration-200 ${
                 isActive
                   ? 'bg-indigo-600 text-white'
-                  : 'bg-white hover:bg-gray-100 text-slate-900 border border-gray-200'
+                  : 'bg-white hover:bg-indigo-600 hover:text-white text-slate-900 border border-gray-200'
               }`}
             >
               <div
-                className={`w-14 h-14 flex items-center justify-center rounded-full mb-5 ${
+                className={`w-14 h-14 flex items-center  justify-center rounded-full mb-5 ${
                   isActive
                     ? 'bg-white text-indigo-600'
                     : 'bg-indigo-100 text-indigo-600'
@@ -65,7 +65,7 @@ export default function PopularThingsToDo() {
               <h3 className="text-base font-semibold">{title}</h3>
               <p
                 className={`text-sm mt-1 ${
-                  isActive ? 'text-indigo-100' : 'text-slate-500'
+                  isActive ? 'text-indigo-100' : 'text-white'
                 }`}
               >
                 {tours}

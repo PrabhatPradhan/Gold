@@ -17,7 +17,7 @@ const data = [
   },
   {
     id: 2,
-    image: "/Images/slider-card.jpeg",
+    image: "/Images/slider-card-2.jpeg",
     location: "New York, USA",
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     rating: "4.8 (243)",
@@ -25,7 +25,7 @@ const data = [
   },
   {
     id: 3,
-    image: "/Images/slider-card.jpeg",
+    image: "/Images/slider-card-3.jpeg",
     location: "London, UK",
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     rating: "4.8 (243)",
@@ -33,7 +33,7 @@ const data = [
   },
   {
     id: 4,
-    image: "/Images/slider-card.jpeg",
+    image: "/Images/slider-card-2.jpeg",
     location: "New York, USA",
     title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
     rating: "4.8 (243)",
@@ -49,7 +49,7 @@ const data = [
   },
   {
     id: 6,
-    image: "/Images/slider-card.jpeg",
+    image: "/Images/slider-card-2.jpeg",
     location: "New York, USA",
     title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
     rating: "4.8 (243)",
@@ -57,7 +57,7 @@ const data = [
   },
   {
     id: 7,
-    image: "/Images/slider-card.jpeg",
+    image: "/Images/slider-card-3.jpeg",
     location: "London, UK",
     title: "Westminster Walking Tour & Westminster Abbey Entry",
     rating: "4.8 (243)",
@@ -85,8 +85,9 @@ export default function TopTrending() {
   };
 
   return (
-    <div className="bg-[#f5f5f5] p-4 md:p-8 overflow-hidden relative">
-      <div className="flex justify-between items-center mb-4">
+    <div className="bg-[#f5f5f5] p-4 md:p-8 overflow-hidden relative ">
+      <div className="ml-10 mr-10">
+      <div className="flex justify-between items-center mb-4 ">
         <h2 className="text-xl md:text-2xl font-bold text-[#131313]">
           Top Trending
         </h2>
@@ -98,16 +99,16 @@ export default function TopTrending() {
       <div className="relative">
         <div
           ref={scrollRef}
-          className="flex gap-9 overflow-x-auto scroll-smooth pb-2"
+          className="flex gap-6 overflow-x-auto scroll-smooth pb-2"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {data.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-lg shadow-md p-4 min-w-[260px] max-w-[270px] flex-shrink-0"
+              className="bg-white rounded-lg shadow-md p-2 min-w-[260px] max-w-[260px] flex-shrink-0"
             >
               {/* ✅ Image with fixed height using fill */}
-              <div className="relative w-full h-[200px] rounded-md overflow-hidden">
+              <div className="relative w-full h-[180px] rounded-md overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -121,9 +122,9 @@ export default function TopTrending() {
 
               {/* Details */}
               <div className="mt-3 text-sm text-gray-600 flex items-center gap-1">
-                <MdLocationOn className="text-lg" /> {item.location}
+                <MdLocationOn className="text-sm" /> {item.location}
               </div>
-              <h3 className="mt-2 font-medium text-[16px] leading-snug">
+              <h3 className="mt-2 font-medium text-[14px] leading-snug">
                 {item.title}
               </h3>
               <div className="mt-1 text-yellow-500 text-sm">
@@ -131,7 +132,7 @@ export default function TopTrending() {
               </div>
               <div className="flex justify-between items-center mt-2 text-sm">
                 <div className="flex items-center gap-1">
-                  <PiClockLight className="text-md" /> 4 days
+                  <PiClockLight className="text-sm"/> 4 days
                 </div>
                 <div>
                   From <span className="font-semibold">{item.price}</span>
@@ -144,18 +145,20 @@ export default function TopTrending() {
         {/* Scroll Buttons */}
         <button
           onClick={() => scroll("left")}
-          className="hidden md:flex absolute left-[-20px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10"
+          className="hidden md:flex absolute left-[-50px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10"
         >
           <FaArrowLeft />
         </button>
 
         <button
           onClick={() => scroll("right")}
-          className="hidden md:flex absolute right-[-20px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10"
+          className="hidden md:flex absolute right-[-50px] top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10"
         >
           <FaArrowRight />
         </button>
       </div>
+      </div>
     </div>
   );
 }
+ 

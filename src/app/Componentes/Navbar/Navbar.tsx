@@ -5,6 +5,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
+import ToursDropdown from "./ToursDropdown/ToursDropdown";
+import DestinationDropdown from "./DestinationDropdown/DestinationDropdown";
 
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,18 +27,20 @@ export default function HeroSection() {
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex gap-12 text-sm font-medium">
-              <a href="#" className="text-green-400 flex items-center gap-1">
+              <a href="#" className="text-green-600 flex items-center gap-1">
                 Home {/* <IoIosArrowDown className="text-xs" /> */}
               </a>
               <a href="#">About</a>
+              {/* <a href="#" className="flex items-center gap-1">
+                Tours  <IoIosArrowDown className="text-xs" />
+              </a> */}
+              <ToursDropdown/>
+              {/*  <a href="#" className="flex items-center gap-1">
+                Destination <IoIosArrowDown className="text-xs" /> 
+              </a>*/}
+              <DestinationDropdown/>
               <a href="#" className="flex items-center gap-1">
-                Tours {/*  <IoIosArrowDown className="text-xs" /> */}
-              </a>
-              <a href="#" className="flex items-center gap-1">
-                Destination {/*  <IoIosArrowDown className="text-xs" /> */}
-              </a>
-              <a href="#" className="flex items-center gap-1">
-                Pages {/* <IoIosArrowDown className="text-xs" /> */}
+               Gallary {/* <IoIosArrowDown className="text-xs" /> */}
               </a>
               <a href="#">Contact</a>
             </nav>
@@ -46,14 +50,14 @@ export default function HeroSection() {
           <div className="hidden lg:flex items-center gap-5">
             <FaUserCircle className="text-xl" />
             <div className="flex items-center gap-2">
-              <FaWhatsapp className="text-green-600 text-xl" />
+              <FaWhatsapp className="text-green-800 text-xl" />
 
               <div className="text-xs leading-4">
                 <p className="text-gray-500">Whatsapp</p>
-                <p className="text-green-400 font-semibold">+990-737 621 432</p>
+                <p className="text-green-600 font-semibold">+990-737 621 432</p>
               </div>
             </div>
-            <button className="bg-green-400 text-white py-2 px-5 rounded-full font-semibold">
+            <button className="bg-green-600 text-white py-2 px-5 rounded-full font-semibold">
               Book A Trip
             </button>
           </div>

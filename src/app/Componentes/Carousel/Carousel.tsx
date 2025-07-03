@@ -73,10 +73,10 @@ export default function TrendingDestinations() {
     <section className="px-5 py-16">
       {/* Heading */}
       <div className="flex justify-between items-center max-w-7xl mx-auto mb-10">
-        <h2 className="text-[32px] font-bold text-slate-900">Trending destinations</h2>
+        <h2 className="text-[32px] font-bold text-slate-900 ml-12">Trending destinations</h2>
         <a
           href="#"
-          className="text-slate-700 flex items-center gap-1 font-medium hover:underline text-sm"
+          className="text-slate-700 mr-19 flex items-center gap-1 font-medium hover:underline text-sm"
         >
           See all
         </a>

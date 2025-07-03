@@ -1,4 +1,3 @@
- 
 import Navbar from "./Componentes/Navbar/Navbar";
 import Top from "./Componentes/Top/Top";
 import Carousel from "./Componentes/Carousel/Carousel"
@@ -10,11 +9,11 @@ import Whoweare from "./Componentes/Whoweare/Whoweare"
 import Footer from "./Componentes/Footer/Footer";
 import PromoCards from "./Componentes/PromoCards/PromoCards";
 import Visafree from "./Componentes/Visafree/Visafree"
-import Colorline from "./Componentes/Colorline/Colorline";
+
 export default function Home() {
   return (
      <>
-    <Colorline/>
+     
     <Navbar/>
     <Top/>
     <Carousel/>
@@ -24,7 +23,6 @@ export default function Home() {
     <Slider/>
     <Visafree/>
     <PopularThings/>
-    
     <Whoweare/>
     <PromoCards/>
     <Footer/>

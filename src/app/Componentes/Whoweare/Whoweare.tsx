@@ -14,32 +14,29 @@ export default function WhoWeAre() {
         <div className="flex flex-col lg:flex-row gap-10 items-center">
           {/* Left Content */}
           <div className="lg:w-7/12 w-full">
-          
-      <h2
-        style={{
-          fontFamily: "'Pacifico', cursive",
-          position: "relative",
-          fontSize: "32px",
-          color: "#22c55e",
-        }}
-      >
-        Who We Are
-        <span
-          style={{
-            content: '""',
-            position: "absolute",
-            left: 0,
-            bottom: -6,
-            width: "30%",
-            height: "6px",
-            backgroundColor: "#22c55e",
-            borderRadius: "9999px",
-            display: "block",
-          }}
-        ></span>
-      </h2>
-     
-
+            <h2
+              style={{
+                fontFamily: "'Pacifico', cursive",
+                position: "relative",
+                fontSize: "32px",
+                color: "#22c55e",
+              }}
+            >
+              Who We Are
+              <span
+                style={{
+                  content: '""',
+                  position: "absolute",
+                  left: 0,
+                  bottom: -6,
+                  width: "30%",
+                  height: "6px",
+                  backgroundColor: "#22c55e",
+                  borderRadius: "9999px",
+                  display: "block",
+                }}
+              ></span>
+            </h2>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-snug">
               Our Main Goal To Provide <br />
@@ -96,10 +93,10 @@ export default function WhoWeAre() {
           </div>
 
           {/* Right Images */}
-          <div className="relative lg:w-5/12 w-full">
+          <div className="relative w-full lg:w-5/12 hidden md:block">
             {/* Experience Box */}
-            <div className="absolute top-6 sm:top-12 left-4 bg-green-600 text-white rounded-full px-4 py-2 shadow-lg flex items-center gap-3 z-10 border-2 border-white">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-white flex items-center justify-center font-bold text-base sm:text-lg">
+            <div className="absolute top-6 sm:top-12 bg-green-600 text-white rounded-full px-4 py-2 shadow-lg flex items-center gap-3 z-10 border-2 border-white">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-white flex items-center justify-center font-bold text-base sm:text-lg">
                 15
               </div>
               <div className="leading-tight text-xs sm:text-sm font-medium">
@@ -110,7 +107,7 @@ export default function WhoWeAre() {
 
             <div className="grid grid-cols-2 gap-4 relative">
               {/* Main Large Image on Top Right */}
-              <div className="col-span-2 relative h-60 sm:h-72 md:h-80 lg:h-72 w-full">
+              <div className="col-span-2 relative w-[26rem] ml-16 h-60 sm:h-72 md:h-80 lg:h-82">
                 <Image
                   src="/Images/who-1.jpeg"
                   alt="Main Image"
@@ -120,16 +117,16 @@ export default function WhoWeAre() {
               </div>
 
               {/* Two Smaller Images in Bottom Row */}
-              <div className="relative h-40 w-full">
+              <div className="absolute h-80 w-[50%]">
                 <Image
                   src="/Images/wh0-2.jpeg"
                   alt="Image 2"
                   fill
-                  className="border-4 border-white rounded-lg object-cover"
+                  className="border-4 mt-39 border-white rounded-lg object-cover"
                 />
               </div>
 
-              <div className="relative h-32 w-full">
+              <div className="relative block ml-[15.5rem] h-32 w-full">
                 <Image
                   src="/Images/who-3.jpeg"
                   alt="Image 3"

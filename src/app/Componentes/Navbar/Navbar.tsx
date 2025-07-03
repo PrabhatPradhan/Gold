@@ -7,6 +7,7 @@ import { RxCross2 } from "react-icons/rx";
 import Image from "next/image";
 import ToursDropdown from "./ToursDropdown/ToursDropdown";
 import DestinationDropdown from "./DestinationDropdown/DestinationDropdown";
+import Link from "next/link";
 
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,10 +28,16 @@ export default function HeroSection() {
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex gap-12 text-sm font-medium">
-              <a href="#" className="text-green-600 flex items-center gap-1">
-                Home {/* <IoIosArrowDown className="text-xs" /> */}
-              </a>
-              <a href="#">About</a>
+              {/* <a href="#" className="text-green-600 flex items-center gap-1">
+                Home  <IoIosArrowDown className="text-xs" />  
+              </a> */}
+              <Link href="/">
+              Home 
+              </Link>
+               
+              <Link href="/about">
+              About
+              </Link>
               {/* <a href="#" className="flex items-center gap-1">
                 Tours  <IoIosArrowDown className="text-xs" />
               </a> */}
@@ -39,10 +46,14 @@ export default function HeroSection() {
                 Destination <IoIosArrowDown className="text-xs" /> 
               </a>*/}
               <DestinationDropdown/>
-              <a href="#" className="flex items-center gap-1">
-               Gallary {/* <IoIosArrowDown className="text-xs" /> */}
-              </a>
-              <a href="#">Contact</a>
+              {/* <a href="#" className="flex items-center gap-1">
+               {/* <IoIosArrowDown className="text-xs" /> 
+              </a> */}
+              <Link href="/gallary"> Gallary</Link>
+             
+              <Link href="/contact">
+              Contact
+              </Link>
             </nav>
           </div>
 

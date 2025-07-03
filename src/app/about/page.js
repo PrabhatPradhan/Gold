@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Componentes/Navbar/Navbar";
-import { FaHome } from "react-icons/fa";
+ 
 import Whoweare from "../Componentes/Whoweare/Whoweare";
 import Footer from "../Componentes/Footer/Footer";
 import OurMissionVision from "../Componentes/OurMissionVision/OurMissionVision";

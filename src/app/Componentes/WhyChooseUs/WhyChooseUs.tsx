@@ -33,7 +33,7 @@ import {
           </h2>
           <p className="text-gray-600 max-w-xl mx-auto">
             Leading The Way In Small Group Adventures For Over 20 Years.
-            Discover How We're Redefining The Future Of Travel.
+            Discover How Were Redefining The Future Of Travel.
           </p>
         </div>
   

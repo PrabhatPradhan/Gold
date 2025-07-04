@@ -23,7 +23,7 @@ export default function page() {
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
 
-        <h1 className="relative text-4xl font-bold z-10">About Us</h1>
+        <h1 className="relative text-4xl font-bold z-10 mt-8 ">About Us</h1>
 
         <div className="relative z-10 mt-4 px-6 py-2 rounded-full flex   space-x-2 text-sm text-white  ">
           <Link href="/">Home</Link>

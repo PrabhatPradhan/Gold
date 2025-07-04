@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import React, { useRef, useState  } from "react";
-
+import React, { useRef, useState } from "react";
+import { GoArrowUpRight } from "react-icons/go";
 export default function TrendingDestinations() {
   const destinations = [
     { city: "Paris", tours: "100+ Tours", img: "/Images/crausal-1.jpeg" },
@@ -73,17 +73,22 @@ export default function TrendingDestinations() {
     <section className="px-5 py-16">
       {/* Heading */}
       <div className="flex justify-between items-center max-w-7xl mx-auto mb-10">
-        <h2 className="text-[32px] font-bold text-slate-900 ml-12">Trending destinations</h2>
+      <h2 className="text-xl ml-12 md:text-2xl font-bold text-[#131313]">
+       
+       Trending destinations
+</h2>
+
         <a
           href="#"
-          className="text-slate-700 mr-19 flex items-center gap-1 font-medium hover:underline text-sm"
+          className="text-slate-700 mr-12 flex items-center gap-1 font-medium hover:underline text-sm"
         >
           See all
+          <GoArrowUpRight />
         </a>
       </div>
 
       {/* Slider */}
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative w-[90%] mx-auto">
         <div
           ref={scrollRef}
           onScroll={handleScroll}
@@ -91,7 +96,7 @@ export default function TrendingDestinations() {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseUp}
           onMouseUp={handleMouseUp}
-          className="flex overflow-x-auto gap-12 scroll-smooth no-scrollbar cursor-grab select-none"
+          className="flex overflow-x-auto gap-10 scroll-smooth no-scrollbar cursor-grab select-none"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {destinations.map((d, i) => (
@@ -101,7 +106,7 @@ export default function TrendingDestinations() {
                   src={d.img}
                   alt={d.city}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                   sizes="(max-width: 768px) 100px, 120px"
                 />
               </div>
@@ -113,16 +118,17 @@ export default function TrendingDestinations() {
 
         {/* Pagination Dots */}
         <div className="flex justify-center gap-2 mt-6">
-          {Array.from({ length: totalPages }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goToPage(i)}
-              className={`w-2 h-2 rounded-full transition ${
-                i === activeIndex ? "bg-blue-600" : "bg-gray-300"
-              }`}
-            ></button>
-          ))}
-        </div>
+  {Array.from({ length: totalPages }).map((_, i) => (
+    <button
+      key={i}
+      onClick={() => goToPage(i)}
+      className={`h-2 rounded-full transition-all duration-300 ${
+        i === activeIndex ? "w-6 bg-purple-500" : "w-2 bg-gray-300"
+      }`}
+    ></button>
+  ))}
+</div>
+
       </div>
     </section>
   );

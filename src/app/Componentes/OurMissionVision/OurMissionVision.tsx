@@ -9,7 +9,7 @@ export default function ImpactSection() {
         <img
           src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Volunteers"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-shadow duration-500 hover:shadow-[0_0_20px_rgba(0,0,0,0.4)]     "
         />
       </div>
 

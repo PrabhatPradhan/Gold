@@ -9,7 +9,6 @@ import {
   FaUmbrellaBeach,
   FaUtensils,
 } from 'react-icons/fa';
-import { IoIosArrowForward } from 'react-icons/io';
 
 const activities = [
   { title: 'City Tours', icon: <FaCity />, tours: '100+ Tours' },
@@ -21,25 +20,19 @@ const activities = [
 ];
 
 export default function PopularThingsToDo() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null); // ✅ fixed type
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16 ml-12 mr-12">
+    <section className="max-w-7xl mx-auto px-4 py-16 ml-14 mr-4">
       {/* Heading */}
       <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
-        <h2 className="text-3xl font-extrabold text-slate-900">
+        <h2 className="text-xl md:text-2xl font-bold text-[#131313]">
           Popular things to do
         </h2>
-        <a
-          href="#"
-          className="text-slate-700 font-medium flex items-center gap-1 hover:underline text-sm"
-        >
-          See all <IoIosArrowForward />
-        </a>
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 ">
         {activities.map(({ title, icon, tours }, index) => {
           const isActive = activeIndex === index;
 
@@ -47,25 +40,27 @@ export default function PopularThingsToDo() {
             <div
               key={title}
               onClick={() => setActiveIndex(index)}
-              className={`cursor-pointer rounded-2xl px-6 py-8 flex flex-col items-center text-center transition duration-200 ${
-                isActive
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-white hover:bg-indigo-600 hover:text-white text-slate-900 border border-gray-200'
-              }`}
+              className={`group cursor-pointer rounded-2xl px-4 py-5 sm:px-6 sm:py-8 flex flex-col items-center text-center transition duration-700 ease-in-out
+                ${
+                  isActive
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-white text-slate-900 border border-gray-200 hover:bg-indigo-600 hover:text-white hover:shadow-[0_4px_20px_rgba(0,0,0,0.3)]'
+                }`}
             >
               <div
-                className={`w-14 h-14 flex items-center  justify-center rounded-full mb-5 ${
-                  isActive
-                    ? 'bg-white text-indigo-600'
-                    : 'bg-indigo-100 text-indigo-600'
-                }`}
+                className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full mb-4 sm:mb-5 text-xl transition duration-300 ease-in-out
+                  ${
+                    isActive
+                      ? 'bg-white text-indigo-600'
+                      : 'bg-indigo-100 text-indigo-600 group-hover:bg-white group-hover:text-indigo-600'
+                  }`}
               >
-                <span className="text-xl">{icon}</span>
+                {icon}
               </div>
-              <h3 className="text-base font-semibold">{title}</h3>
+              <h3 className="text-sm sm:text-base font-semibold">{title}</h3>
               <p
-                className={`text-sm mt-1 ${
-                  isActive ? 'text-indigo-100' : 'text-white'
+                className={`text-xs sm:text-sm mt-1 transition ${
+                  isActive ? 'text-indigo-100' : 'text-white group-hover:text-indigo-100'
                 }`}
               >
                 {tours}

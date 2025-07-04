@@ -9,7 +9,7 @@ import Whoweare from "./Componentes/Whoweare/Whoweare"
 import Footer from "./Componentes/Footer/Footer";
 import PromoCards from "./Componentes/PromoCards/PromoCards";
 import Visafree from "./Componentes/Visafree/Visafree"
-
+ 
 export default function Home() {
   return (
      <>
@@ -26,6 +26,7 @@ export default function Home() {
     <Whoweare/>
     <PromoCards/>
     <Footer/>
+   
      </>
   );
 }

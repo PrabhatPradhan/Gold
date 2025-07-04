@@ -40,5 +40,8 @@
     .footer {
       overflow-x: hidden;
     }
+    #footrt-form{
+      width: 20rem;
+    }
   }
  

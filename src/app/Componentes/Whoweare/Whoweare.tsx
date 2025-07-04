@@ -18,8 +18,9 @@ export default function WhoWeAre() {
               style={{
                 fontFamily: "'Pacifico', cursive",
                 position: "relative",
-                fontSize: "32px",
+                fontSize: "25px",
                 color: "#22c55e",
+                marginBottom: "8px",
               }}
             >
               Who We Are
@@ -29,11 +30,12 @@ export default function WhoWeAre() {
                   position: "absolute",
                   left: 0,
                   bottom: -6,
-                  width: "30%",
-                  height: "6px",
+                  width: "25%",
+                  height: "2px",
                   backgroundColor: "#22c55e",
                   borderRadius: "9999px",
                   display: "block",
+                  marginBottom: "4px",
                 }}
               ></span>
             </h2>
@@ -93,6 +95,7 @@ export default function WhoWeAre() {
           </div>
 
           {/* Right Images */}
+          {/* Right Images */}
           <div className="relative w-full lg:w-5/12 hidden md:block">
             {/* Experience Box */}
             <div className="absolute top-6 sm:top-12 bg-green-600 text-white rounded-full px-4 py-2 shadow-lg flex items-center gap-3 z-10 border-2 border-white">
@@ -107,31 +110,31 @@ export default function WhoWeAre() {
 
             <div className="grid grid-cols-2 gap-4 relative">
               {/* Main Large Image on Top Right */}
-              <div className="col-span-2 relative w-[26rem] ml-16 h-60 sm:h-72 md:h-80 lg:h-82">
+              <div className="col-span-2 relative w-[26rem] ml-16 h-60 sm:h-72 md:h-80 lg:h-82 overflow-hidden group">
                 <Image
                   src="/Images/who-1.jpeg"
                   alt="Main Image"
                   fill
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover transition-transform duration-700 ease-in-out group-hover:scale-110 focus:scale-110"
                 />
               </div>
 
               {/* Two Smaller Images in Bottom Row */}
-              <div className="absolute h-80 w-[50%]">
+              <div className="absolute h-[29.5rem] w-[50%] overflow-hidden group">
                 <Image
                   src="/Images/wh0-2.jpeg"
                   alt="Image 2"
                   fill
-                  className="border-4 mt-39 border-white rounded-lg object-cover"
+                  className="border-4 mt-39 border-white rounded-lg object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 focus:scale-110"
                 />
               </div>
 
-              <div className="relative block ml-[15.5rem] h-32 w-full">
+              <div className="relative block ml-[15.5rem] h-32 w-full overflow-hidden group">
                 <Image
                   src="/Images/who-3.jpeg"
                   alt="Image 3"
                   fill
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover transition-transform duration-500 ease-in-out group-hover:scale-110 focus:scale-110"
                 />
               </div>
             </div>

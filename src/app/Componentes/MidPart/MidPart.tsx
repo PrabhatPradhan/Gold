@@ -20,7 +20,7 @@ export default function PromoBanner() {
           <p className="mt-4 text-[#4f4f4f]">
             Limited time offer , don t miss the opportunity
           </p>
-          <button className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-orange-600 transition">
+          <button className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-orange-700 transition">
             Book Now <FaArrowRight />
           </button>
         </div>

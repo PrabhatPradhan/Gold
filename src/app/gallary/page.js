@@ -3,8 +3,13 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaPlus, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Navbar from "../Componentes/Navbar/Navbar";
+import Footer from "../Componentes/Footer/Footer";
 
 const galleryImages = [
+  "/Images/gellary-1.avif",
+  "/Images/gellary-2.avif",
+  "/Images/gellary-3.avif",
+  "/Images/gellary-4.avif",
   "/Images/gellary-1.avif",
   "/Images/gellary-2.avif",
   "/Images/gellary-3.avif",
@@ -48,7 +53,7 @@ export default function Gallery() {
                 alt={`Gallery ${index + 1}`}
                 width={500}
                 height={500}
-                className="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm"
+                className="w-full h-full object-cover transition-all duration-500 "
               />
               <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <FaPlus className="text-white text-4xl mb-2 drop-shadow-lg" />
@@ -61,7 +66,7 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Fullscreen Modal */}
+      
       {/* Fullscreen Modal */}
       {selectedIndex !== null && (
   <div className="fixed inset-0  bg-gray-600 bg-opacity-90 flex items-center justify-center z-50">
@@ -97,7 +102,7 @@ export default function Gallery() {
   </div>
 )}
 
-
+     <Footer/>
     </>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect } from "react";
 import { GoArrowUpRight } from "react-icons/go";
-
+import 'aos/dist/aos.css';
 const destinations = [
   {
     id: 1,
@@ -42,8 +43,17 @@ const destinations = [
 ];
 
 export default function TrendingDestinations() {
+  useEffect(() => {
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+      });
+    });
+  }, []);
   return (
-    <div className="py-12 ml-6 px-4 md:px-12 bg-white">
+    <div className="py-12 ml-6 px-4 md:px-12 bg-white"  data-aos="fade-up">
     {/* Header */}
     <div className="flex justify-between items-center mb-6">
       <h2 className="text-xl md:text-2xl font-bold text-[#131313]">

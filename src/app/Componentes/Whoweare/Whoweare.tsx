@@ -1,10 +1,21 @@
 "use client";
 import Image from "next/image";
 import { FaShieldAlt, FaUserTie, FaClock } from "react-icons/fa";
-
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 export default function WhoWeAre() {
+  useEffect(() => {
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+      });
+    });
+  }, []);
   return (
     <section
+    data-aos="fade-up"
       className="py-12 bg-cover bg-center"
       style={{
         backgroundImage: "url('/Images/who-we-area-three-bg.png')",

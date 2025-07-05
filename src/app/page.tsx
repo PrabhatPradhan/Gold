@@ -10,10 +10,11 @@ import Footer from "./Componentes/Footer/Footer";
 import PromoCards from "./Componentes/PromoCards/PromoCards";
 import Visafree from "./Componentes/Visafree/Visafree"
  
+ 
 export default function Home() {
   return (
      <>
-     
+      
     <Navbar/>
     <Top/>
     <Carousel/>

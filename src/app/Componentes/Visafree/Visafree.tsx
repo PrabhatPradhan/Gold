@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const destinations = [
@@ -87,7 +87,7 @@ const destinations = [
     image: '/Images/Visa-card-8.jpeg',
   },
 ];
-
+import 'aos/dist/aos.css';
 export default function VisaFreeDestinations() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -98,9 +98,18 @@ export default function VisaFreeDestinations() {
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
+  useEffect(() => {
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+      });
+    });
+  }, []);
 
   return (
-    <div className="px-4 md:px-6 py-8 md:py-10 bg-white ml-12 mr-12">
+    <div className="px-4 md:px-6 py-8 md:py-10 bg-white ml-12 mr-12"  data-aos="fade-up">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4 gap-2">
         <div>

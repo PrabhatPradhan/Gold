@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   FaCity,
   FaLandmark,
@@ -9,7 +9,7 @@ import {
   FaUmbrellaBeach,
   FaUtensils,
 } from 'react-icons/fa';
-
+import 'aos/dist/aos.css';
 const activities = [
   { title: 'City Tours', icon: <FaCity />, tours: '100+ Tours' },
   { title: 'Cultural Tours', icon: <FaLandmark />, tours: '100+ Tours' },
@@ -21,9 +21,19 @@ const activities = [
 
 export default function PopularThingsToDo() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
+  useEffect(() => {
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+      });
+    });
+  }, []);
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16 ml-14 mr-4">
+    <section className="max-w-7xl mx-auto px-4 py-16 ml-14 mr-4  "  data-aos="fade-up"
+    
+    >
       {/* Heading */}
       <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
         <h2 className="text-xl md:text-2xl font-bold text-[#131313]">

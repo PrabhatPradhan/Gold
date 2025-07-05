@@ -1,10 +1,20 @@
 "use client";
 
 import { FaArrowRight } from "react-icons/fa";
- 
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 export default function PromoBanner() {
+  useEffect(() => {
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+      });
+    });
+  }, []);
   return (
-    <div className="mid">
+    <div className="mid"   data-aos="fade-up">
       <div className="bg-cover bg-center w-full" 
       style={{
         backgroundImage: "url('/Images/mid-bbg.png')",

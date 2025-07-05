@@ -1,24 +1,40 @@
 "use client";
-import React from "react";
+ 
+import React, { useEffect } from "react";
+import 'aos/dist/aos.css';
 
+ 
+ 
 export default function Top() {
+  useEffect(() => {
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+      });
+    });
+  }, []);
   return (
-    <div className="relative w-full h-[35rem] overflow-hidden">
-    {/* Background YouTube Video */}
-    <div className="absolute top-0 left-0 w-full h-full z-0">
-      <iframe
-        className="w-[100%] h-[120%] scale-125 absolute top-0 left-0 pointer-events-none"
-        src="https://www.youtube.com/embed/3SsK-cxlj_w?autoplay=1&mute=1&controls=0&loop=1&playlist=3SsK-cxlj_w&modestbranding=1&showinfo=0"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
-    </div>
-  
-    {/* Optional Overlay Content */}
-    {/* <div className="absolute bottom-20 left-6 md:left-10 text-white z-10 max-w-[90%] md:max-w-[600px]">
+    <>
+      
+        <div className="relative w-full h-[35rem] overflow-hidden" data-aos="fade-up">
+          {/* Background YouTube Video */}
+          <div className="absolute top-0 left-0 w-full h-full z-0 bg-[('')]">
+            <video
+              className="w-[100%] h-[auto]  absolute top-16 left-0 object-cover pointer-events-none"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/Video/bannervideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          {/* Optional Overlay Content */}
+          {/* <div className="absolute bottom-20 left-6 md:left-10 text-white z-10 max-w-[90%] md:max-w-[600px]">
       <h3 className="text-xl">Starting at $978</h3>
       <h1 className="text-3xl md:text-5xl font-bold mt-2">
         Iceland’s legendary Golden Circle
@@ -31,7 +47,8 @@ export default function Top() {
         View Tour
       </button>
     </div> */}
-  </div>
-  
+        </div>
+      
+    </>
   );
 }

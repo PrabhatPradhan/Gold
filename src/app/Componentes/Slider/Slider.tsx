@@ -1,11 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FaArrowLeft, FaArrowRight, FaHeart } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { PiClockLight } from "react-icons/pi";
 import { GoArrowUpRight } from "react-icons/go";
+ 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+ 
 const data = [
   {
     id: 1,
@@ -84,9 +89,19 @@ export default function TopTrending() {
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // only animate once
+      offset: 120,    // offset (in px) before triggering animation
+    });
+  }, []);
   return (
-    <div className="bg-[#f5f5f5] p-4 md:p-8 overflow-hidden relative">
+    <>
+   
+  {/* Your content here */}
+   
+    <div className="bg-[#f5f5f5] p-4 md:p-8 overflow-hidden relative" data-aos="fade-up">
       <div className="mx-4 md:mx-10">
         <div className="flex flex-row justify-between items-center mb-4">
           <h2 className="text-xl md:text-2xl font-bold text-[#131313]">
@@ -162,5 +177,7 @@ export default function TopTrending() {
         </div>
       </div>
     </div>
+     
+    </>
   );
 }

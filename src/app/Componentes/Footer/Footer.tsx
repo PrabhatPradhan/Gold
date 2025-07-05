@@ -1,17 +1,26 @@
 "use client";
 import Image from "next/image";
 import "./Footer.css";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaFacebookF,
   FaXTwitter,
   FaLinkedinIn,
   FaPinterestP,
 } from "react-icons/fa6";
-
+import 'aos/dist/aos.css';
 export default function Footer() {
+  useEffect(() => {
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 120,
+      });
+    });
+  }, []);
   return (
-    <div className="footer">
+    <div  data-aos="fade-up" className="footer">
       <footer className="bg-[url('/Images/footer-back.png')] text-white   px-6 md:px-10 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-4  pb-10">
           {/* Subscribe Card */}

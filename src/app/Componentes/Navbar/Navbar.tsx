@@ -8,13 +8,16 @@ import Image from "next/image";
 import ToursDropdown from "./ToursDropdown/ToursDropdown";
 import DestinationDropdown from "./DestinationDropdown/DestinationDropdown";
 import Link from "next/link";
-
+ 
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
       {/* Navbar */}
+       
+   
+
       <div className="fixed top-0 left-0 w-full px-4 md:px-10 py-4 flex justify-between items-center bg-white z-50 shadow">
         {/* Left logo + nav */}
         <div className="flex items-center gap-[7rem]">
@@ -125,6 +128,7 @@ export default function HeroSection() {
           className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 lg:hidden"
         />
       )}
+ 
     </>
   );
 }
